@@ -1,0 +1,164 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .search-box {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .search-box h2 {
+            margin-top: 0;
+            color: #1a252f;
+            font-size: 22px;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+        }
+
+        #resultados {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card-producto {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #0d6efd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card-producto h4 {
+            margin: 0 0 8px 0;
+            color: #212529;
+        }
+
+        .card-producto p {
+            margin: 0;
+            color: #198754;
+            font-weight: bold;
+        }
+
+        /* ---------- Añadidos AA21 ---------- */
+
+        .modo {
+            margin: 0 0 14px 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: #198754;
+        }
+
+        .modo.vulnerable {
+            color: #dc3545;
+        }
+
+        .card-producto .detalle {
+            margin-top: 6px;
+            color: #6c757d;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .grid-alta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 15px;
+            margin-bottom: 15px;
+        }
+
+        .grid-alta label {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .grid-alta input {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .grid-alta input:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+        }
+
+        .error {
+            min-height: 1em;
+            color: #dc3545;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        #mensaje {
+            margin: 12px 0 0 0;
+            padding: 0;
+        }
+
+        #mensaje.ok,
+        #mensaje.fallo {
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        #mensaje.ok {
+            background-color: #e7f6ec;
+            color: #1e7b3c;
+        }
+
+        #mensaje.fallo {
+            background-color: #fdecea;
+            color: #b3261e;
+        }
+
+        @media (max-width: 520px) {
+            .grid-alta {
+                grid-template-columns: 1fr;
+            }
+        }
